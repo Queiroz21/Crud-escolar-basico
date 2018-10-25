@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Pagina inicial herdada por todas as outras-->
+	<!-- NADA A SER ALTERADO AQUI -->
+        {% block title %}
+                <title>Menu</title>
+        {% endblock title %}
+        <link href="../static/css/home.css" rel="stylesheet">   
+        
+</head>
+<body>
+		<!--Sem esse bloco, os outros não são captados, NÃO SE ESQUEÇA-->
+		<!-- NÃO REMOVA -->
+        {% block content %}
+
+        {% endblock content %}
+</body>
+</html>

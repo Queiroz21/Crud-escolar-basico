@@ -1,0 +1,54 @@
+{% extends 'inicio.html' %}
+
+        {% block title %}
+                <title>LMS | Cadastro de Alunos</title>
+                <link rel="shortcut icon" type="image/png" href="../static/imagens/configuration.png"/>
+        {% endblock title %}
+          
+        {% block content %}
+
+                <header class="cabecalho">
+                        <div class="icon_voltar">
+                                <a href="{% url 'home' %}">
+                                        <img src="../static/imagens/left-arrow-key.png" alt="Voltar" title="Voltar" width="100%" height="100%"/>
+                                </a>
+                        </div>
+                        <div class="title_pages">
+                                <h2 class="h2_pages">Cadastro de Alunos</h2>
+                        </div>
+                </header>
+
+                <form>
+
+                        <div class="content_form">
+                                <div class="label_input">
+                                        Nome: <br>
+                                        <input type="text" name="nomeA" class="inputs_form">
+                                </div>
+                                <div class="label_input">
+                                        E-mail: <br>
+                                        <input type="email" name="emailA" class="inputs_form">
+                                </div>
+                                <div class="label_input">
+                                        Data de Nascimento: <br>
+                                        <input type="text" name="dtnascA" class="inputs_form">
+                                </div>
+                                <div class="label_input">
+                                        Celular: <br>
+                                        <input type="text" name="celA" class="inputs_form">
+                                </div>
+                                <div class="label_input">
+                                        RA <br>
+                                        <input type="number" name="coordenadorC" class="inputs_form">
+                                </div>
+                                <div class="label_input">
+                                        Foto: <br>
+                                        <input type="text" name="nome" class="inputs_form">
+                                </div>
+                                <div>
+                                        <input type="button" value="Gravar" onclick="window.location.reload()">
+                                        <input type="button" value="Apagar" onclick="window.location.reload()">
+                                </div>
+                        </div>
+                </form>
+        {% endblock content %}

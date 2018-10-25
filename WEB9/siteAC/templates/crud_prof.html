@@ -1,0 +1,52 @@
+{% extends 'inicio.html' %}
+
+        {% block title %}
+                <title>LMS | Cadastro de Professores</title>
+                <link rel="shortcut icon" type="image/png" href="../static/imagens/configuration.png"/>
+        {% endblock title %}
+        
+        {% block content %}
+                <header class="cabecalho">
+                        <div class="icon_voltar">
+                                <a href="{% url 'home' %}">
+                                        <img src="../static/imagens/left-arrow-key.png" alt="Voltar" title="Voltar" width="100%" height="100%"/>
+                                </a>
+                        </div>
+                        <div class="title_pages">
+                                <h2 class="h2_pages">Cadastro de Professores</h2>
+                        </div>
+                </header>
+        <form>
+                <div class="content_form">
+                        <div class="label_input">
+                                Nome: <br>
+                                <input type="text" name="nomeP" class="inputs_form">
+                        </div>
+                        <div class="label_input">
+                                Habilidade(s): <br>
+                                <input type="text" name="Habilidade" class="inputs_form">
+                        </div>
+                        <div class="label_input">
+                                CPF: <br>
+                                <input type="text" name="cpf" class="inputs_form">
+                        </div>
+                        <div class="label_input">
+                                E-mail: <br>
+                                <input type="email" name="emailP" class="inputs_form">
+                        </div>
+                        <div class="label_input">
+                                Celular: <br>
+                                <input type="text" name="celP" class="inputs_form">
+                        </div>
+                        <div class="label_input">
+                                Salário: <br>
+                                <input type="text" name="salario" class="inputs_form">
+                        </div>
+                        <div>
+                                <input type="button" value="Gravar" onclick="window.location.reload()">
+                                <input type="button" value="Apagar" onclick="window.location.reload()">
+                        
+                        </div>
+                </div>
+        </form>
+{% endblock content %}

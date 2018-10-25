@@ -1,0 +1,56 @@
+{% extends 'inicio.html' %}
+
+        {% block title %}
+                <title>LMS | Cadastro de Disciplinas</title>
+                <link rel="shortcut icon" type="image/png" href="../static/imagens/configuration.png"/>
+        {% endblock title %}
+        
+        {% block content %}
+
+                <header class="cabecalho">
+                        <div class="icon_voltar">
+                                <a href="{% url 'home' %}">
+                                        <img src="../static/imagens/left-arrow-key.png" alt="Voltar" title="Voltar" width="100%" height="100%"/>
+                                </a>
+                        </div>
+                        <div class="title_pages">
+                                <h2 class="h2_pages">Cadastro de Disciplinas</h2>
+                        </div>
+                </header>
+
+                <form>
+
+                        <div class="content_form">
+                                <div class="label_input">
+                                        Nome: <br>
+                                        <input type="text" name="nomeC" class="inputs_form">
+                                </div>
+                                <div class="label_input">
+                                        Carga Horária: <br>
+                                        <input type="number" name="cargaH" class="inputs_form">
+                                </div>
+                                <div class="label_input">
+                                        Percentual Teorico: <br>
+                                        <input type="number" name="pt" class="inputs_form">
+                                </div>
+                                <div class="label_input">
+                                        Percentual Prático: <br>
+                                        <input type="number" name="pp" class="inputs_form">
+                                </div>
+                                <div class="label_input">
+                                        Coordenador do Curso <br>
+                                        <input type="text" name="coordenadorC" class="inputs_form">
+                                </div>
+                                <div class="label_input">
+                                        Plano de ensino: <br>
+                                        <input type="text" name="nome" class="inputs_form">
+                                </div>
+                                <div>
+                                        <input type="button" value="Gravar" onclick="window.location.reload()">
+                                        <input type="button" value="Apagar" onclick="window.location.reload()">
+
+                                </div>
+                        </div>
+                </form>
+        
+        {% endblock content %}

@@ -1,0 +1,24 @@
+{% extends 'inicio.html' %}
+
+	{% block title %}
+		<title>Bem-Vindo(a)</title>
+		<link rel="shortcut icon" type="image/png" href="../static/imagens/configuration.png"/>
+	{% endblock title %}
+
+	{% block content %}
+	
+		<div class="banner">
+			<div class="bloc">
+				<h1>Projeto LMS</h1>
+				
+				<hr style="width: 60px; border: solid 1px #000;">
+
+				<nav class="menu_entrada">
+					<button class="menus" onclick="window.location.href='{% url 'prof' %}';">Cadastrar Professores</button>
+					<button class="menus" onclick="window.location.href='{% url 'aluno' %}';">Cadastrar Alunos</button>
+					<button class="menus" onclick="window.location.href='{% url 'disci' %}';">Cadastrar Disciplinas</button>
+				</nav>
+			</div>
+		</div>
+
+	{% endblock content %}
