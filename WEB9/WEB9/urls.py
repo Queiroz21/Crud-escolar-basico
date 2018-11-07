@@ -26,7 +26,8 @@ urlpatterns = [
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
-    url(r'^prof/$', views.prof, name='prof'), 
-    url(r'^aluno/$', views.aluno, name='aluno'),
-    url(r'^disci/$', views.disci, name='disci'),
+    url(r'^prof/$', views.Prof.as_view(), name='prof'), 
+    #ao chamar da VIEW, sempre usar as.view() para realizar o import do que você estiver chamando
+    url(r'^aluno/$', views.Aluno.as_view(), name='aluno'),
+    url(r'^disci/$', views.Disc.as_view(), name='disci'),
 ]
