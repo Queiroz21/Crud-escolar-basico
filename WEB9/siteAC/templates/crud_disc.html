@@ -19,37 +19,41 @@
                 </header>
 
                 <form>
-
                         <div class="content_form">
-                                <div class="label_input">
-                                        Nome: <br>
-                                        <input type="text" name="nomeC" class="inputs_form">
-                                </div>
-                                <div class="label_input">
-                                        Carga Horária: <br>
-                                        <input type="number" name="cargaH" class="inputs_form">
-                                </div>
-                                <div class="label_input">
-                                        Percentual Teorico: <br>
-                                        <input type="number" name="pt" class="inputs_form">
-                                </div>
-                                <div class="label_input">
-                                        Percentual Prático: <br>
-                                        <input type="number" name="pp" class="inputs_form">
-                                </div>
-                                <div class="label_input">
-                                        Coordenador do Curso <br>
-                                        <input type="text" name="coordenadorC" class="inputs_form">
-                                </div>
-                                <div class="label_input">
-                                        Plano de ensino: <br>
-                                        <input type="text" name="nome" class="inputs_form">
-                                </div>
-                                <div>
-                                        <input type="button" value="Gravar" onclick="window.location.reload()">
-                                        <input type="button" value="Apagar" onclick="window.location.reload()">
+                                {% csrf_token %} 
+                                {% load widget_tweaks %}
+                                        <div class="label_input">
+                                                Nome: <br>
+                                                {{ form.nome|add_class:"inputs_form" }}
 
-                                </div>
+                                        </div>
+                                        <div class="label_input">
+                                                Carga Horária: <br>
+                                                {{ form.cargaH|add_class:"inputs_form" }}
+
+                                        </div>
+                                        <div class="label_input">
+                                                Percentual Teorico: <br>
+                                                {{ form.PctTeo|add_class:"inputs_form" }}
+                                        </div>
+
+                                        <div class="label_input">
+                                                Percentual Prático: <br>
+                                                {{ form.PctPrat|add_class:"inputs_form" }}
+                                        </div>
+                                        <div class="label_input">
+                                                Coordenador do Curso <br>
+                                                {{ form.CoordCurso|add_class:"inputs_form" }}
+                                        </div>
+                                        <div class="label_input">
+                                                Plano de ensino: <br>
+                                                {{ form.PlanoEns|add_class:"inputs_form" }}
+                                        </div>
+                                        <div>
+                                                <input type="button" value="Gravar" onclick="window.location.reload()">
+                                                <input type="button" value="Apagar" onclick="window.location.reload()">
+
+                                        </div>
                         </div>
                 </form>
         

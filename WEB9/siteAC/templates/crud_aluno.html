@@ -21,25 +21,30 @@
                 <form>
 
                         <div class="content_form">
+                                <!-- csrf serve para previnir de ataques de
+                                Cross Site Request Forgery.-->
+                                {% csrf_token %} 
+                                {% load widget_tweaks %}
                                 <div class="label_input">
                                         Nome: <br>
-                                        <input type="text" name="nomeA" class="inputs_form">
+                                        {{ form.nome|add_class:"inputs_form" }}
+
                                 </div>
                                 <div class="label_input">
                                         E-mail: <br>
-                                        <input type="email" name="emailA" class="inputs_form">
+                                        {{ form.email|add_class:"inputs_form" }}
                                 </div>
                                 <div class="label_input">
                                         Data de Nascimento: <br>
-                                        <input type="text" name="dtnascA" class="inputs_form">
+                                        {{ form.dtnasc|add_class:"inputs_form" }}
                                 </div>
                                 <div class="label_input">
                                         Celular: <br>
-                                        <input type="text" name="celA" class="inputs_form">
+                                        {{ form.celular|add_class:"inputs_form" }}
                                 </div>
                                 <div class="label_input">
                                         RA <br>
-                                        <input type="number" name="coordenadorC" class="inputs_form">
+                                        {{ form.ra|add_class:"inputs_form" }}
                                 </div>
                                 <div class="label_input">
                                         Foto: <br>

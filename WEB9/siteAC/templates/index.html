@@ -2,7 +2,8 @@
 
 	{% block title %}
 		<title>Bem-Vindo(a)</title>
-		<link rel="shortcut icon" type="image/png" href="../static/imagens/configuration.png"/>
+		{%load static%}
+		<link rel="shortcut icon" type="image/png" href="{% static 'imagens/configuration.png' %}"/>
 	{% endblock title %}
 
 	{% block content %}

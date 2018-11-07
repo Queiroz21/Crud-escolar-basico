@@ -18,35 +18,44 @@
                 </header>
         <form>
                 <div class="content_form">
-                        <div class="label_input">
-                                Nome: <br>
-                                <input type="text" name="nomeP" class="inputs_form">
+                        {% csrf_token %} 
+                        {% load widget_tweaks %}
+                                <div class="label_input">
+                                        Nome: <br>
+                                        {{ form.nome|add_class:"inputs_form" }}
+
+                                </div>
+                                <div class="label_input">
+                                        Habilidade(s): <br>
+                                        {{ form.hab|add_class:"inputs_form" }}
+
+                                </div>
+
+                                <div class="label_input">
+                                        CPF: <br>
+                                       {{ form.cpf|add_class:"inputs_form" }}
+
+                                </div>
+                                <div class="label_input">
+                                        E-mail: <br>
+                                        {{ form.email|add_class:"inputs_form" }}
+
+                                </div>
+                                <div class="label_input">
+                                        Celular: <br>
+                                        {{ form.celular|add_class:"inputs_form" }}
+
+                                </div>
+                                <div class="label_input">
+                                        Salário: <br>
+                                        {{ form.salario|add_class:"inputs_form" }}
+
+                                </div>
+                                <div>
+                                        <input type="button" value="Gravar" onclick="window.location.reload()">
+                                        <input type="button" value="Apagar" onclick="window.location.reload()">
+                                
+                                </div>
                         </div>
-                        <div class="label_input">
-                                Habilidade(s): <br>
-                                <input type="text" name="Habilidade" class="inputs_form">
-                        </div>
-                        <div class="label_input">
-                                CPF: <br>
-                                <input type="text" name="cpf" class="inputs_form">
-                        </div>
-                        <div class="label_input">
-                                E-mail: <br>
-                                <input type="email" name="emailP" class="inputs_form">
-                        </div>
-                        <div class="label_input">
-                                Celular: <br>
-                                <input type="text" name="celP" class="inputs_form">
-                        </div>
-                        <div class="label_input">
-                                Salário: <br>
-                                <input type="text" name="salario" class="inputs_form">
-                        </div>
-                        <div>
-                                <input type="button" value="Gravar" onclick="window.location.reload()">
-                                <input type="button" value="Apagar" onclick="window.location.reload()">
-                        
-                        </div>
-                </div>
         </form>
 {% endblock content %}

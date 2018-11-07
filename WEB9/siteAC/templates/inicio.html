@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!--Pagina inicial herdada por todas as outras-->
+	<!--Pagina inicial/mãe herdada por todas as outras-->
 	<!-- NADA A SER ALTERADO AQUI -->
         {% block title %}
                 <title>Menu</title>
         {% endblock title %}
-        <link href="../static/css/home.css" rel="stylesheet">   
+        <!--Carregabdo pasta STATIC -->
+        {% load static %}
+        <link href="{% static 'css/home.css' %}" rel="stylesheet">   
         
 </head>
 <body>
