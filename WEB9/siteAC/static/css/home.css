@@ -3,6 +3,7 @@ body {
     padding: 0px;
     font-family: sans-serif;
     font-size: 16px;
+    background-color: #f2f2f2;
 }
 
 ul {list-style: none;}
@@ -48,22 +49,15 @@ h1 {
     width: 100%;
     height: 50px;
     background-color: black;
+    text-align: center;
 }
 
-.icon_voltar {
-    width: 40px;
-    height: 40px;
-    float: left;
-    margin-left: 30px;
-    margin-top: 5px;
+.line_header {
+    width: 100%;
+    height: 3px;
+    background-color: #ffcb00;
 }
 
-.title_pages {
-    width: 500px;
-    height: 50px;
-    float: left;
-    margin-left: 30px;
-}
 
 .menu_entrada {
     width: 300px;
@@ -74,7 +68,7 @@ h1 {
 }
 
 .menus {
-    background-color: #f2f2f2;
+    background-color: white;
     width: 100%;
     height: 40px;
     border: solid 1px #000;
@@ -88,25 +82,59 @@ h1 {
 .menus:hover {
     background-color: #000;
     color: white;
+    font-weight: bold;
 }
 
 /* FORMULÁRIO*/
 .inputs_form {
-    width: 280px;
+    width: 100%;
     height: 25px;
     border: solid 1px #ccc;
     padding-left: 10px;
 }
 
 .content_form {
-    width: 300px;
-    height: auto;
-    margin: auto;
+    margin-top: 50px;
+}
+
+.centraliza_form {
+    width: 320px;
+    margin: 0 auto;
 }
 
 .label_input {
-    width: 100%;
+    width: 300px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.buttons_pages_gravar {
+    width: 90px;
+    height: 30px;
+    background-color: #28a745;
+    border: solid 1px #28a745;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.buttons_pages_gravar:hover {
+    background-color: #23903c;
+    border: solid 1px #23903c;
+}
+
+.buttons_pages_apagar {
+    width: 90px;
+    height: 30px;
+    background-color: #dc3545;
+    border: solid 1px #dc3545;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.buttons_pages_apagar:hover {
+    background-color: #c32232;
+    border: solid 1px #c32232;
 }
 /* END FORMULÁLIO */
