@@ -7,9 +7,9 @@ class InscricaoAluno(models.Model):
         nome = models.CharField(max_length=100) 
         email = models.EmailField()
         dtnasc = models.DateField()
-        celular = models.IntegerField()
+        celular = models.CharField(max_length=14)
         ra = models.IntegerField()
-        foto = models.CharField(max_length=800)
+        foto = models.ImageField()
 
         class Meta:
         	#Então, descrever pra que serve isso~~
@@ -24,7 +24,7 @@ class InscricaoProf(models.Model):
         nome = models.CharField(max_length=100) 
         email = models.EmailField()
         hab = models.CharField(max_length=500)
-        celular = models.IntegerField()
+        celular = models.CharField(max_length=14)
         cpf = models.CharField(max_length=14)
         #Existe campo numero/salario?
         salario = models.CharField(max_length=9)
