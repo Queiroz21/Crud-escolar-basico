@@ -7,55 +7,53 @@
         
         {% block content %}
                 <header class="cabecalho">
-                        <div class="icon_voltar">
-                                <a href="{% url 'home' %}">
-                                        <img src="../static/imagens/left-arrow-key.png" alt="Voltar" title="Voltar" width="100%" height="100%"/>
-                                </a>
-                        </div>
-                        <div class="title_pages">
-                                <h2 class="h2_pages">Cadastro de Professores</h2>
-                        </div>
+                        <h2 class="h2_pages">Cadastro de Professores</h2>
                 </header>
+                <div class="line_header" >
+
+                </div>
+                
         <form>
                 <div class="content_form">
-                        {% csrf_token %} 
-                        {% load widget_tweaks %}
+                        <div class="centraliza_form">
+                                {% csrf_token %} 
+                                {% load widget_tweaks %}
                                 <div class="label_input">
                                         Nome: <br>
                                         {{ form.nome|add_class:"inputs_form" }}
-
+                
                                 </div>
                                 <div class="label_input">
                                         Habilidade(s): <br>
                                         {{ form.hab|add_class:"inputs_form" }}
-
+                
                                 </div>
-
+                
                                 <div class="label_input">
                                         CPF: <br>
-                                       {{ form.cpf|add_class:"inputs_form" }}
-
+                                        {{ form.cpf|add_class:"inputs_form" }}
+                
                                 </div>
                                 <div class="label_input">
                                         E-mail: <br>
                                         {{ form.email|add_class:"inputs_form" }}
-
+                
                                 </div>
                                 <div class="label_input">
                                         Celular: <br>
                                         {{ form.celular|add_class:"inputs_form" }}
-
+                
                                 </div>
                                 <div class="label_input">
                                         Salário: <br>
                                         {{ form.salario|add_class:"inputs_form" }}
-
+                
                                 </div>
                                 <div>
-                                        <input type="button" value="Gravar" onclick="window.location.reload()">
-                                        <input type="button" value="Apagar" onclick="window.location.reload()">
-                                
+                                        <input type="button" value="APAGAR" onclick="window.location.reload()" class="buttons_pages_apagar">
+                                        <input type="button" value="GRAVAR" onclick="window.location.reload()" class="buttons_pages_gravar">
                                 </div>
                         </div>
+                </div>
         </form>
 {% endblock content %}
